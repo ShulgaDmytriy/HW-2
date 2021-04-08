@@ -7,68 +7,118 @@
     <title>HW#2</title>
 </head>
 <body>
-    <div>
-        <h1>HW#2.<br>HTML</h1>
-        <table>
-           <tr>
-            <th>Ім'я</th>
-            <th>Прізвище</th>
-            <th>Телефон</th>
-            <th>mail</th>
-        </tr> 
-        <tr>
-            <td>Джон</td>
-            <td>Уік</td>
-            <td>+38066-555-44-33</td>
-            <td>JoinUik@gmail.com</td>
-        </tr> 
-        <tr>
-            <td>Джеймс</td>
-            <td>Бонд</td>
-            <td>+38097-777-77-77</td>
-            <td>007@list.com</td>
-        </tr> 
-        <tr>
-            <td>Гері</td>
-            <td>Олдман</td>
-            <td>+38067-347-66-21</td>
-            <td>HenryOldman@gmail.com</td>
-    
-        </tr>
-        <tr>
-            <td>Ozzy</td>
-            <td>Osbourne</td>
-            <td>+38067-347-66-21</td>
-            <td>Osbourne@gmail.com</td>
-         
-        </tr> 
-        </table>   
-    
-        <p class="name">
-        <form>   
-    <input type="text" placeholder="Введіть своє ім'я"><br>
-    <input type="text" placeholder="Введіть своє прізвище"><br><br>
-        
-    <br>Ваша стать:</br><br>
-    <input type="radio" name="gender" value="woman" checked> жіноча<Br>
-        <input type="radio" name="gender" value="man"> чоловіча<Br>
+    <div class="main">
+      <h1>HTML. Tables & forms</h1>
+      <div class="tableClass">
+        <table class="table_dark">
+          <tr>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Number</th>
+            <th>Email</th>
+          </tr>
+          <tr>
+            <td>Anatolii</td>
+            <td>Ducalis</td>
+            <td>+380669683051</td>
+            <td>anatolii.ducalis@mail.ru</td>
+          </tr>
+          <tr>
+            <td>Albus</td>
+            <td>Dumbledore</td>
+            <td>+380663015862</td>
+            <td>albus.dumbledore@hogwarts.edu</td>
+          </tr>
+          <tr>
+            <td>Forrest</td>
+            <td>Gump</td>
+            <td>+380669620575</td>
+            <td>forrest.gump@gmail.com</td>
+          </tr>
+          <tr>
+            <td>Steve</td>
+            <td>Wozniak</td>
+            <td>+380666507849</td>
+            <td>steve.wozniak@apple.com</td>
+          </tr>
+        </table>
+      </div>
       
-      <p><textarea name="comment" placeholder="Задайте питання" cols="50" rows="5"></textarea></p>
-      <b>Виберіть Ваше місто:</b><br><br>
-    <select name="cities">
-        <option disabled selected>Виберіть Ваше місто</option>
-        <option>Київ</option>   
-        <option>Житомир</option>  
-        <option>Суми</option>  
-        <option>Ірпінь</option>
-        <option>Буча</option> 
-    </select>
-    <p>
-        <b>Виберіть мову:</b><br>
-        <input type="checkbox" name="language" >Українська<br>
-        <input type="checkbox" name="language">English<br>
-        <p><input type="submit" value="Відправити"></p><br>
-    </form>
+      <div class="container"  >
+        <div class="enter" >
+          <form class="dark_form">
+            <p><strong>Enter your first and last name:</strong></p>
+            <p>
+              <input class="inputNames" name="fistName" placeholder="Fist name" />
+            </p>
+            <p>
+              <input class="inputNames" name="surName" placeholder="Last name" />
+            </p>
+        </div>
+  
+          <div class="genderChoice">
+            <p>
+              <strong>Choose your gender:</strong>
+            </p>
+              <input type="radio" id="male" name="gender" value="male" checked />
+              <label for="male">Male</label><br />
+              <input type="radio" id="female" name="gender" value="female" />
+              <label for="female">Female</label>
+          </div>
+          </div>
+
+        <div class="wrap">
+          <div class="question">
+            <p><strong>What are you interested in?</strong></p>
+            <textarea id="textarea"
+              name="question"
+              rows="5"
+              cols="22"
+              placeholder="Write your question"
+            ></textarea>
+          </div>
+          
+  
+          <div class="languages">
+            <p><strong>What languages do you know?</strong></p>
+            <input
+              type="checkbox"
+              id="language-1"
+              name="language-1"
+              value="Ukranian"
+            />
+            <label for="language-1">Ukranian</label><br />
+            <input
+              type="checkbox"
+              id="language-2"
+              name="language-2"
+              value="Russian"
+            />
+            <label for="language-2">Russian</label><br />
+            <input
+              type="checkbox"
+              id="language-3"
+              name="language-3"
+              value="English"
+            />
+            <label for="language-3">English</label><br />
+          </div>
+          <div class="city_select">
+            <p><strong>Where are you from?</strong></p>
+            <select id="cities" name="cities">
+              <option value disabled selected>Select city</option>
+              <option value="kyiv">Kyiv</option>
+              <option value="lviv">Lviv</option>
+              <option value="dnipro">Dnipro</option>
+              <option value="kharkiv">Kharkiv</option>
+              <option value="odessa">Odessa</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="submit"><input type="submit" value="Submit" /></div>
+
+      </form>
     </div>
 </body>
 </html>
